@@ -7,6 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import streamlit as st
 
+st.title("seleniumテストアプリ")
+
 service = Service(executable_path='chromedriver.exe')
 driver = webdriver.Chrome(service=service)
 
