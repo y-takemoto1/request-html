@@ -8,9 +8,10 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
+
 st.title("seleniumテストアプリ")
 
-service = Service(executable_path='chromedriver.exe')
+service = Service(executable_path='/chromedriver.exe')
 driver = webdriver.Chrome(service=service)
 
 target_url = 'https://jp.indeed.com/jobs?q=%E6%AD%A3%E7%A4%BE%E5%93%A1&l=%E7%A6%8F%E5%B2%A1%E7%9C%8C&from=searchOnDesktopSerp&vjk=d4bb56841be7498e'
