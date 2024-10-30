@@ -16,7 +16,7 @@ try:
     st.text('ブラウザが正常に起動しました。')
     print("ブラウザが正常に起動しました。")
 except Exception as e:
-    st.text('エラーが発生しました：', e)
+    st.text(f'エラーが発生しました： {e}')
     print("エラーが発生しました:", e)
 finally:
     if driver is not None:  # driverが初期化されている場合のみquit
