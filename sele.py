@@ -5,9 +5,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import openpyxl
+import streamlit as st
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
-service = Service(executable_path='chromedriver.exe')
-driver = webdriver.Chrome(service=service)
+st.text('seleniumテスト')
+
+#service = Service(executable_path='chromedriver.exe')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 # 取得したいサイトのURLを''の間に入力
 target_url = 'https://jp.indeed.com/jobs?q=%E6%AD%A3%E7%A4%BE%E5%93%A1&l=%E7%A6%8F%E5%B2%A1%E7%9C%8C&from=searchOnDesktopSerp&vjk=d4bb56841be7498e'
@@ -28,6 +33,7 @@ j = 1
 #　 　　　　↓
 while j <= 10:
     print('COUNT:', c)
+    st.text('ページ数カウント：', j)
     time.sleep(1)
     while True:
         try:
